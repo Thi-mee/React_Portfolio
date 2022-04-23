@@ -1,0 +1,91 @@
+.header__container {
+	height: 90vh;
+	padding-top: 6em;
+	display: flex;
+	gap: 4em;
+}
+
+.header__container h1 {
+	font-size: clamp(2.5rem 70% 5rem);
+	font-size: 3rem;
+	line-height: 1.2;
+}
+.me {
+	height: 320px;
+	width: 200px;
+	position: relative;
+	overflow: hidden;
+	border-radius: 7em 9em 0 2em;
+	margin-left: 5em;
+}
+
+.me img {
+	position: absolute;
+	width: 110%;
+	top: -4em;
+	left: -1.5em;
+}
+
+.ctab {
+	display: flex;
+	gap: 2rem;
+  font-weight: bold;
+  height: 50.3858px;
+  
+}
+.ctab .light {
+	position: relative;
+	overflow: hidden;
+}
+.ctab .light:hover{
+  border: 1px solid transparent;
+}
+.ctab .light::after {
+	content: "";
+	position: absolute;
+	left: -5px;
+	bottom: 0;
+	height: 100%;
+	width: 5px;
+	background-color: var(--accent-color);
+	z-index: -1;
+  transition: transform 250ms ease;
+}
+.ctab .light:hover::after {
+  transform: scaleX(27);
+  transform-origin: left;
+}
+.ctab .bold {
+	background-color: var(--accent-color);
+	border: 0;
+	color: var(--color-white);
+
+}
+.ctab .bold:hover {
+	animation: blip 250ms ease forwards;
+}
+.accent {
+	color: var(--accent-color);
+}
+
+@media screen and (max-width: 1110px) {
+	.container {
+		width: var(--container-width-mdm);
+		text-align: center;
+	}
+}
+@media screen and (max-width: 750px) {
+	.header__container {
+		flex-direction: column;
+		gap: 0;
+	}
+	.me {
+		margin: 0 auto;
+	}
+	.header__container h1 {
+		font-size: 2.1rem;
+	}
+	.ctab {
+		justify-content: center;
+	}
+}

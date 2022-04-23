@@ -1,0 +1,37 @@
+nav{
+  position: fixed;
+  display: flex;
+  border-radius: 2em;
+  background-color: var(--color-bg-haze);
+  bottom: 30px;
+  filter: blur(20%);
+  left: 50%;
+  transform: translateX(-50%);
+}
+nav a{
+  height: 50px;
+  width: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  border: 1px solid var(--color-gray);
+  padding: 0;
+  margin: .25em .5em;
+  background-color: var(--color-bg);
+  color: var(--accent-color);
+  backdrop-filter: blur(20px);
+  transition: background-color 350ms ease;
+}
+nav a:hover{
+  background-color: var(--accent-color-hover);
+  color: var(--color-white);
+  border: 0;
+  font-weight: bold;
+}
+nav a.active{
+  background-color: var(--accent-color);
+  color: var(--color-white);
+  border: 0;
+  font-weight: bold;
+}
